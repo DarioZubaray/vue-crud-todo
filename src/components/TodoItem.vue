@@ -21,8 +21,8 @@ export default {
     },
     methods: {
         ...mapActions({
-            _updateTodoStatus: '/todos/updateTodoStatus',
-            _removeTodo: '/todos/removeTodo'
+            _updateTodoStatus: 'todos/updateTodoStatus',
+            _removeTodo: 'todos/removeTodo'
         }),
         ...mapMutations('todos', ['setTodo']),
         gotoUpdateTodo() {

@@ -21,10 +21,10 @@ export default {
         TodoList
     },
     mounted() {
-        this.fetchTodos()
+        this.fetchTodo()
     },
     methods: {
-        ...mapActions('todos', ['fetchTodos'])
+        ...mapActions('todos', ['fetchTodo'])
     },
     computed: {
         ...mapGetters('todos', ['pending', 'done'])

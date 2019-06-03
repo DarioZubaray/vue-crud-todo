@@ -1,6 +1,6 @@
 export default {
     todos: [],
-    selecteddTodo: null,
+    selectedTodo: null,
     error: false,
     errorMessage: ''
 }

@@ -25,7 +25,7 @@ export async function addTodo({ commit, dispatch }, todo) {
                 done: false
             }
         })
-        dispatch('fetchTodos')
+        dispatch('fetchTodo')
     } catch (e) {
         commit('todos/setError', e.message, { root: true })
     } finally {
@@ -52,7 +52,7 @@ export async function updateTodo({ commit }, todo) {
     }
 }
 
-export async function updateTodoStatus({ commit }, todo) {
+export async function updateTodoStatus({ commit, dispatch }, todo) {
     try {
         await Vue.axios({
             url: `/todos/${todo.id}`,
@@ -63,7 +63,7 @@ export async function updateTodoStatus({ commit }, todo) {
                 done: !todo.done
             }
         })
-
+        dispatch('fetchTodo')
     } catch (e) {
         commit('todos/setError', e.message, { root: true })
     } finally {
@@ -77,7 +77,7 @@ export async function removeTodo({ commit, dispatch }, id) {
             url: `/todos/${id}`,
             method: 'DELETE'
         })
-        dispatch('fetchTodos')
+        dispatch('fetchTodo')
     } catch (e) {
         commit('todos/setError', e.message, { root: true })
     } finally {

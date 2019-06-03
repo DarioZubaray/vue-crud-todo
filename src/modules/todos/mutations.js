@@ -3,7 +3,7 @@ export function setTodos(state, todos) {
 }
 
 export function setTodo(state, todo) {
-    state.selectTodo = todo
+    state.selectedTodo = todo
 }
 
 export function updateTodoStatus(state, payload) {

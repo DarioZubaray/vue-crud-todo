@@ -25,7 +25,7 @@ export default new Router({
             path: '/todos/:id/update',
             name: 'todos-update',
             component: () =>
-                import ('./views/TodoCreate.vue')
+                import ('./views/TodoUpdate.vue')
         }
     ]
 })
