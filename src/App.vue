@@ -5,8 +5,9 @@
         <b-nav-item exact to="/todos">Listado de TODOs</b-nav-item>
         <b-nav-item exact to="/todos/create">Crear TODOs</b-nav-item>
       </b-nav>
+      <router-view/>
     </b-container>
-    <router-view/>
+
   </div>
 </template>
 
